@@ -1,0 +1,19 @@
+name: Restart-server-Node-js-CI
+
+on:
+  push:
+    branches: main
+
+env:
+  SERVER_IP: 135.181.86.136
+  SERVER_USERNAME: root
+  SERVER_COMMANDS:
+    node -v;
+    echo 123
+
+jobs:
+  restart-server:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Restart via SSH
+        run: sshpass -p '${{secrets.SERVER_PASSWORD}}' ssh -o StrictHostKeyChecking=no ${{env.SERVER_USERNAME}}@${{env.SERVER_IP}} "${{env.SERVER_COMMANDS}}"
