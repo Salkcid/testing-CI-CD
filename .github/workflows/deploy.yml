@@ -8,6 +8,7 @@ env:
   SERVER_IP: 135.181.86.136
   SERVER_USERNAME: root
   SERVER_COMMANDS:
+    touch qwasdasdafwefasdavcdfbsgbsfe;
     node -v;
     echo 123
 
