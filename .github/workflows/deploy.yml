@@ -7,8 +7,8 @@ on:
 env:
   SERVER_IP: 135.181.86.136
   SERVER_USERNAME: root
-  SERVER_COMMANDS:
-    touch qwasdasdafwefasdavcdfbsgbsfe;
+  SERVER_COMMANDS: |
+    touch newfile1;
     node -v;
     echo 123
 
